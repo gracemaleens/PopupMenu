@@ -106,6 +106,10 @@ public class PopupMenu extends LinearLayout implements OnItemClickListener {
         mBottomFLayout.addView(mPopupViewFLayout);
     }
 
+    /**
+     * @param titles 弹出菜单的标题
+     * @param views 弹出菜单所显示的view
+     */
     public void setPopupView(List<String> titles, View[] views) {
         for (int i = 0; i < titles.size(); i++) {
             TextView textView = new TextView(getContext());
@@ -144,6 +148,9 @@ public class PopupMenu extends LinearLayout implements OnItemClickListener {
         }
     }
 
+    /**
+     * @param view 操作弹出菜单后，所要显示的内容view
+     */
     public void setContentView(View view) {
         if (view != null) {
             ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
